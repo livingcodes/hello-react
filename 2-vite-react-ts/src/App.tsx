@@ -6,6 +6,10 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  function handleClick() {
+    setCount(count + 1)
+  }
+
   return (
     <>
       <Hello name="Tweedle Dee" />
@@ -21,9 +25,7 @@ function App() {
       </div>
       <h1>Vite + React + TypeScript</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <Btn count={count} hndClick={handleClick} />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -31,7 +33,20 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Btn count={count} hndClick={handleClick} />
     </>
+  )
+}
+
+type BtnProps = {
+  count: number
+  hndClick: () => void
+}
+function Btn({ count, hndClick }: BtnProps) {
+  return (
+    <button className="btn" onClick={hndClick}>
+      count is {count}
+    </button>
   )
 }
 
