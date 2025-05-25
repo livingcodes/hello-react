@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+      <Hello />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -30,6 +31,10 @@ function App() {
       </p>
     </>
   )
+}
+
+function Hello() {
+  return <h1>Hello Vite</h1>
 }
 
 export default App
