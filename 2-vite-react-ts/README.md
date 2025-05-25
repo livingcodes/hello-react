@@ -1,8 +1,47 @@
-# Create with Vite
+# Upgrade Powershell
+
+Authorization to run script error occurred until PowerShell was upgraded from v5 to v7.
+
+Check PowerShell version (PSVersion)
+
+```
+$PSVersionTable
+```
+
+Install PowerShell
+
+```
+winget install Microsoft.PowerShell
+```
+
+# Install node.js
+
+Install **nvm** (node version manager) for windows to switch between node versions
+* https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows
+* https://github.com/coreybutler/nvm-windows/releases/tag/1.2.2
+
+
+Install **node.js**
+
+```
+nvm install lts
+```
+
+```
+node -v
+```
+
+When nvm is installed it also installs **npm**
+
+```
+npm -v
+```
+
+# Create React Project with Vite
 
 ## Create Project
 
-Install create-vite to create new project.
+Install **create-vite** to create new project.
 
 ```
 npm install create-vite
@@ -30,12 +69,22 @@ npm run dev
 
 -or-
 
+Install **vite**
+
 ```
 npm install -g vite
 ```
 
 ```
 npx vite
+```
+
+## Pull from GitHub
+
+`cd` to project's parent directory, and install configured packages before running.
+
+```
+npm install
 ```
 
 # React + TypeScript + Vite
