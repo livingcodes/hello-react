@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      <Hello />
+      <Hello name="Tweedle Dee" />
+      <br />
+      <Hello name="Tweedle Dum" />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -33,8 +35,24 @@ function App() {
   )
 }
 
-function Hello() {
-  return <h1>Hello Vite</h1>
+type HelloProps = {
+  name: string
+}
+function Hello({ name }: HelloProps) {
+  return (
+    <h1
+      style={{
+        background: "linear-gradient(150deg, teal, purple)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text", // for Firefox
+        color: "#333", // fallback color
+        display: "inline-block",
+      }}
+    >
+      Hello {name}
+    </h1>
+  );
 }
 
 export default App

@@ -1,5 +1,9 @@
 # Create with Vite
 
+## Create Project
+
+Install create-vite to create new project.
+
 ```
 npm install create-vite
 ```
@@ -10,12 +14,28 @@ npm create vite@latest my-app
 
 Then cli prompts for framework and language
 
+## Run
+
+Install packages in config
+
 ```
 npm install
 ```
 
+Run and see localhost port number
+
 ```
 npm run dev
+```
+
+-or-
+
+```
+npm install -g vite
+```
+
+```
+npx vite
 ```
 
 # React + TypeScript + Vite
