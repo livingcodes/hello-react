@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Hello from './Hello'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -48,26 +49,6 @@ function Btn({ count, hndClick }: BtnProps) {
       count is {count}
     </button>
   )
-}
-
-type HelloProps = {
-  name: string
-}
-function Hello({ name }: HelloProps) {
-  return (
-    <h1
-      style={{
-        background: "linear-gradient(150deg, teal, purple)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        backgroundClip: "text", // for Firefox
-        color: "#333", // fallback color
-        display: "inline-block",
-      }}
-    >
-      Hello {name}
-    </h1>
-  );
 }
 
 export default App
